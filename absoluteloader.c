@@ -1,40 +1,55 @@
-# include <stdio.h>
-# include <string.h>
-void main()
-{
-char input[10];
-int start,length,address;
-FILE *fp1,*fp2;
-fp1=fopen("input.txt","r");
-fp2=fopen("output.txt","w");
-fscanf(fp1,"%s",input);
-while(strcmp(input,"E")!=0)
-{
-if(strcmp(input,"H")==0)
-{
-fscanf(fp1,"%d",&start);
-fscanf(fp1,"%d",&length);
-fscanf(fp1,"%s",input);
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+void main() {
+  FILE * fp;
+  int i, addr1, l, j, staddr1;
+  char name[10], line[50], name1[10], addr[10], rec[10], ch, staddr[10];
+  printf("enter program name for verify:\n");
+  scanf("%s", name);
+  fp = fopen("input.txt", "r");
+  fscanf(fp, "%s", line);
+  for (i = 2, j = 0; i < 8, j < 6; i++, j++)
+    name1[j] = line[i];
+    name1[j] = '\0';
+  printf("program name is: %s\n", name1);
+  if (strcmp(name, name1) == 0) {
+    printf("verification success \n");
+    do {
+      fscanf(fp, "%s", line);
+      if (line[0] == 'T') {
+        for (i = 2, j = 0; i < 8, j < 6; i++, j++)
+          staddr[j] = line[i];
+        staddr[j] = '\0';
+        staddr1 = atoi(staddr);
+        i = 12;
+        while (line[i] != '$') {
+          if (line[i] != '^') {
+            printf("00%d \t %c%c\n", staddr1, line[i], line[i + 1]);
+            staddr1++;
+            i = i + 2;
+          } else i++;
+        }
+      } else if (line[0] = 'E')
+        fclose(fp);
+    } while (!feof(fp));
+  }
+  else 
+    printf("prgram  name is different verification failed\n");
+
 }
-else if(strcmp(input,"T")==0)
-{
-fscanf(fp1,"%d",&address);
-fscanf(fp1,"%s",input);
-fprintf(fp2,"%d\t%c%c\n",address,input[0],input[1]);
-fprintf(fp2,"%d\t%c%c\n",(address+1),input[2],input[3]);
-fprintf(fp2,"%d\t%c%c\n",(address+2),input[4],input[5]);
-address+=3;
-fscanf(fp1,"%s",input);
-}
-else
-{
-fprintf(fp2,"%d\t%c%c\n",address,input[0],input[1]);
-fprintf(fp2,"%d\t%c%c\n",(address+1),input[2],input[3]);
-fprintf(fp2,"%d\t%c%c\n",(address+2),input[4],input[5]);
-address+=3;
-fscanf(fp1,"%s",input);
-}
-}
-fclose(fp1);
-fclose(fp2);
-}
+
+// begin
+//     read header record
+//     verify program name and length
+//     read first Text record
+//     while record type != 'E' do
+//         begin 
+//             (if object code is in character form,convert into 
+//             internal representation)
+//             move object code to specified location in memory
+//             read next object program record
+//         end
+//     jump to address specified in End record
+// end
