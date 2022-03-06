@@ -4,8 +4,8 @@
 
 void main() {
   FILE * fp;
-  int i, addr1, l, j, staddr1;
-  char name[10], line[50], name1[10], addr[10], rec[10], ch, staddr[10];
+  int i,l, j, staddr1,count,n;
+  char name[10], line[50], name1[10],staddr[10];
   printf("enter program name for verify:\n");
   scanf("%s", name);
   fp = fopen("input.txt", "r");
@@ -24,9 +24,17 @@ void main() {
         staddr[j] = '\0';
         staddr1 = atoi(staddr);
         i = 12;
-        while (line[i] != '$') {
+       
+        while (line[i] != '\0') {
           if (line[i] != '^') {
-            printf("00%d \t %c%c\n", staddr1, line[i], line[i + 1]);
+            count=0;
+            //  printf("%s\n",staddr);
+            // do {
+            //     staddr1 /= 10;
+            //    ++count;
+            //  } while (staddr1 != 0);
+            // printf("%d\n\n\n\n\n",count);
+             printf("%04d \t %c%c\n", staddr1, line[i], line[i + 1]);
             staddr1++;
             i = i + 2;
           } else i++;
