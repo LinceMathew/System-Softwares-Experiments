@@ -10,7 +10,7 @@ void main(){
        scanf("%d",&rq[i]);
 
    }
-    printf("enter the initial head position");
+    printf("enter the initial head position\n");
     scanf("%d",&initial);
     printf("enter the total disk size\n");
     scanf("%d",&size);
@@ -46,7 +46,9 @@ for(i=index;i<n;i++)
     initial=rq[i];
 }
 totalheadmoment=totalheadmoment+abs(size-rq[i-1]-1);
+printf("%d",abs(size-rq[i-1]-1));
 initial=size-1;
+printf("%d",initial);
 for(i=index;i>=0;i--)
     {
     totalheadmoment=totalheadmoment+abs(rq[i]-initial);

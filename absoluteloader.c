@@ -27,7 +27,7 @@ void main() {
        
         while (line[i] != '\0') {
           if (line[i] != '^') {
-             printf("%04d \t %c%c\n", staddr1, line[i], line[i + 1]);
+             printf("%04X\t %c%c\n", staddr1, line[i], line[i + 1]);
             staddr1++;
             i = i + 2;
           } else i++;
