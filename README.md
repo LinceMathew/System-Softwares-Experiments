@@ -5,7 +5,7 @@ resource allocation algorithms in operating systems, and the design and implemen
 
 ### Implemented the below concepts using C
 
-#### non-preemptive CPU Scheduling Algorithms
+#### non-preemptive CPU Scheduling Algorithms (non-preemptive-CSA)
 - FCFS 
 - SJF 
 - Round Robin (pre-emptive) 
@@ -13,20 +13,22 @@ resource allocation algorithms in operating systems, and the design and implemen
 
 
 
-#### Disk Scheduling Algorithms
+#### Disk Scheduling Algorithms (DSA)
 - FCFS
 - SCAN
 - C-SCAN
 
-#### Page Replacement Algorithms
+#### Page Replacement Algorithms (PRA)
 - FIFO
 - LRU 
 - LFU
 
 #### Assemblers
+- pass one of a two pass assembler
 
 #### Loaders
-
+- absolute loader
+- relocating loader
 
 ### Contributions
 Engineering students and graduates can contribute to expanding the program list. Please create a merge request for your system software-related programs.

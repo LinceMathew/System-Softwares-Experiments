@@ -1,3 +1,4 @@
+// Disk Scheduling Algorithm scan
 #include<stdio.h>
 #include<stdlib.h>
 void main(){
