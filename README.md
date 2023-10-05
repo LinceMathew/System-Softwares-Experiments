@@ -23,9 +23,9 @@ resource allocation algorithms in operating systems, and the design and implemen
 - LRU 
 - LFU
 
-  #### Assemblers
+#### Assemblers
 
-  #### Loaders
+#### Loaders
 
 
 ### Contributions
