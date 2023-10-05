@@ -7,28 +7,28 @@ resource allocation algorithms in operating systems, and the design and implemen
 
 #### non-preemptive CPU Scheduling Algorithms (non-preemptive-CSA)
 - [FCFS](./non-preemptive-CSA/fcfs.c) 
-- SJF 
-- Round Robin (pre-emptive) 
-- Priority
+- [SJF](./non-preemptive-CSA/sjf.c)
+- [Round Robin (pre-emptive)](./non-preemptive-CSA/roundrobin.c)
+- [Priority](./non-preemptive-CSA/priority.c)
 
 
 
 #### Disk Scheduling Algorithms (DSA)
-- FCFS
-- SCAN
-- C-SCAN
+- [FCFS](./DSA/fcfs.c)
+- [SCAN](./DSA/scan.c)
+- [C-SCAN](./DSA/c-scan.c)
 
 #### Page Replacement Algorithms (PRA)
-- FIFO
-- LRU 
-- LFU
+- [FIFO](./PRA/fifo.c)
+- [LRU](./PRA/lru.c) 
+- [LFU](./PRA/lfu.c)
 
 #### Assemblers
-- pass one of a two pass assembler
+- [pass one of a two pass assembler](./assember/pass1.c)
 
 #### Loaders
-- absolute loader
-- relocating loader
+- [absolute loader](./loaders/absoluteloader.c)
+- [relocating loader](./loaders/relocating_loader.c)
 
 ### Contributions
 Engineering students and graduates can contribute to expanding the program list. Please create a merge request for your system software-related programs.
