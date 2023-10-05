@@ -6,7 +6,7 @@ resource allocation algorithms in operating systems, and the design and implemen
 ### Implemented the below concepts using C
 
 #### non-preemptive CPU Scheduling Algorithms (non-preemptive-CSA)
-- FCFS 
+- [FCFS](./non-preemptive-CSA/fcfs.c) 
 - SJF 
 - Round Robin (pre-emptive) 
 - Priority
